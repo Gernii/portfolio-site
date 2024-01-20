@@ -1,0 +1,37 @@
+name: Test
+
+description: Lint, Fmt, Test, Check and build
+
+inputs:
+  public_hostname: # id of input
+    description: 'public hostname'
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - name: Lint
+      shell: bash
+      run: npm run lint
+
+    - name: Fmt
+      shell: bash
+      run: npm run fmt
+
+    - name: Test
+      shell: bash
+      run: npm run test
+
+    - name: Check
+      shell: bash
+      run: npm run check
+      env:
+        PUBLIC_HOSTNAME: ${{ inputs.public_hostname }}
+
+    - name: Build
+      shell: bash
+      run: npm run build
+      env:
+        PUBLIC_HOSTNAME: ${{ inputs.public_hostname }}
+        VITE_HOSTNAME: ${{ inputs.public_hostname }}

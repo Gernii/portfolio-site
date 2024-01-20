@@ -1,0 +1,29 @@
+name: Validate PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - edited
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  Validate:
+    environment: Validator
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Test
+        uses: ./.github/actions/test
+        with:
+          public_hostname: ${{ vars.PUBLIC_HOSTNAME }}
