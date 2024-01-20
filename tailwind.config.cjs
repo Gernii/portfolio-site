@@ -5,7 +5,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import daisyThemes from 'daisyui/src/theming/themes';
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
+	darkMode: ['class', '[data-theme="dark"]'],
 	theme: {
 		extend: {
 			spacing: {
@@ -36,7 +36,7 @@ const config = {
 		themes: [
 			{
 				light: {
-					...daisyThemes['winter'],
+					...daisyThemes['winter']
 					// primary: 'oklch(71.03% 0.163 240.29)',
 					// 'primary-content': 'oklch(97.03% 0.015 240.310)',
 					// secondary: '#fc8c04',
@@ -51,7 +51,8 @@ const config = {
 					// '--tab-border': '1px', // border width of tabs
 					// '--tab-radius': '0.5rem' // border radius of tabs}
 				}
-			}
+			},
+			'dark'
 		]
 	},
 	plugins: [Typography, AspectRatio, daisyui]

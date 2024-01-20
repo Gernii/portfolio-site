@@ -1,4 +1,9 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"noscript": "Please enable JavaScript to view the site."
+	"noscript": "Please enable JavaScript to view the site.",
+	"contact": "Contact",
+	"layout_header_openLanguageMenu": "Open Language Menu",
+	"layout_header_openThemeMenu": "Open Theme Menu",
+	"language": "Language",
+	"theme": "Theme"
 }

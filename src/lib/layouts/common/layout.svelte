@@ -1,0 +1,16 @@
+<script lang="ts">
+	import Footer from './footer.svelte';
+	import { Header, SidenavContent } from './header';
+</script>
+
+<div class="drawer">
+	<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+
+	<main class="drawer-content">
+		<Header />
+		<slot />
+		<Footer />
+	</main>
+
+	<SidenavContent />
+</div>
