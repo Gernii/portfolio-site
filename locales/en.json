@@ -5,5 +5,14 @@
 	"layout_header_openLanguageMenu": "Open Language Menu",
 	"layout_header_openThemeMenu": "Open Theme Menu",
 	"language": "Language",
-	"theme": "Theme"
+	"theme": "Theme",
+	"hi_im": "Hi, I'm",
+	"homepage_hero_subtitle": "A",
+	"homepage_hero_subtitle_studying": "Self-taught",
+	"homepage_hero_myname": "Le Ngo Duc Anh",
+	"mySkills": "My Skills",
+	"languages": "Languages",
+	"frameworksAndLibraries": "Frameworks and Libraries",
+	"cloud": "Cloud",
+	"tools": "Tools"
 }

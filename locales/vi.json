@@ -5,5 +5,14 @@
 	"layout_header_openLanguageMenu": "Mở bảng chọn ngôn ngữ",
 	"layout_header_openThemeMenu": "Mở bảng chọn giao diện",
 	"language": "Ngôn ngữ",
-	"theme": "Giao diện"
+	"theme": "Giao diện",
+	"hi_im": "Chào, tôi là",
+	"homepage_hero_subtitle": "Hiện là",
+	"homepage_hero_subtitle_studying": "Tự học",
+	"homepage_hero_myname": "Lê Ngô Đức Anh",
+	"mySkills": "Kỹ năng",
+	"languages": "Ngôn ngữ",
+	"frameworksAndLibraries": "Frameworks and Thư viện",
+	"cloud": "Đám mây",
+	"tools": "Công cụ"
 }

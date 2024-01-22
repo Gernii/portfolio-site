@@ -1,22 +1,34 @@
 <script lang="ts">
 	import { cx } from 'cva';
+	import { twMerge } from 'tailwind-merge';
 
-	export let meta: ImgMeta[];
+	interface $$Props {
+		meta: ImgMeta[];
+		alt?: string;
+		loading?: 'lazy' | 'eager';
+		imageClass?: string;
+		pictureClass?: string;
+		author?: string;
+	}
+
+	export let meta: $$Props['meta'];
+
+	export let alt: $$Props['alt'] = undefined;
+	export let loading: $$Props['loading'] = 'lazy';
+
+	export let imageClass: $$Props['imageClass'] = undefined;
+	export let pictureClass: $$Props['pictureClass'] = undefined;
+	export let author: $$Props['author'] = undefined;
+
 	// if there is only one, vite-imagetools won't wrap the object in an array
 	if (!(meta instanceof Array)) meta = [meta];
 
-	const sources = meta[0].sources;
+	$: sources = meta[0].sources;
 
-	const fallback = meta[0].img;
-
-	export let alt = '';
-	export let loading: 'lazy' | 'eager' | null | undefined = 'lazy';
-
-	export let imageClass = '';
-	export let pictureClass = '';
+	$: fallback = meta[0].img;
 </script>
 
-<picture class={cx('block h-full', pictureClass)}>
+<picture class={twMerge(cx('block h-full w-full', pictureClass))} data-author={author}>
 	{#each Object.entries(sources) as [type, srcMeta]}
 		<source type="image/{type}" srcset={srcMeta} />
 	{/each}

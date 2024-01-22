@@ -3,7 +3,7 @@
 	import { Header, SidenavContent } from './header';
 </script>
 
-<div class="drawer">
+<div class="drawer bg-base-200/40">
 	<input id="my-drawer" type="checkbox" class="drawer-toggle" />
 
 	<main class="drawer-content">
