@@ -21,7 +21,7 @@
 	import SkillCard from './skill-card.svelte';
 </script>
 
-<Container>
+<Container root="section">
 	<ContainerContent>
 		<SectionTitle>{m.mySkills()}</SectionTitle>
 

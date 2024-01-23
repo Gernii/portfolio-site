@@ -29,6 +29,7 @@
 				pictureClass={cx('size-12 sm:size-16 p-1', {
 					'dark:bg-white rounded-btn': needBgWhite
 				})}
+				alt={title ?? tooltip}
 			/>
 			<p>{title ?? tooltip}</p>
 		</div>

@@ -7,7 +7,7 @@
 		TEXT_TYPING_DELAY_BEFORE_REPLAY,
 		TEXT_TYPING_DELAY_GENERATE,
 		TEXT_TYPING_DELAY_REMOVE
-	} from './constants';
+	} from '../../features/text-typing-effect/constants';
 
 	interface $$Props {
 		texts: string[];

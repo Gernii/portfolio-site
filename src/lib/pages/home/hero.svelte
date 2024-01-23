@@ -3,15 +3,15 @@
 
 	import * as m from '$i18n/messages';
 
-	import TextTypingEffect from './text-typing-effect.svelte';
+	import { TextTypingEffect } from '$lib/features/text-typing-effect';
 </script>
 
-<div class="h-dvh overflow-hidden">
+<section class="h-dvh overflow-hidden">
 	<ContainerContent class="grid h-full content-center">
 		<div class="text-shadow-sm w-full shadow-base-content/5">
 			<p class="text-base font-semibold sm:text-xl">{m.hi_im()}</p>
 			<p class="text-3xl font-bold text-primary sm:text-6xl">
-				<TextTypingEffect texts={['Gernii', m.homepage_hero_myname()]} />
+				<TextTypingEffect texts={[m.myNickName(), m.myFullName()]} />
 			</p>
 			<p class="pt-1 text-lg font-semibold sm:pt-2 sm:text-2xl">
 				<TextTypingEffect
@@ -24,4 +24,4 @@
 			</p>
 		</div>
 	</ContainerContent>
-</div>
+</section>

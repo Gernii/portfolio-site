@@ -5,16 +5,19 @@
 	import { containerClassNameHandler } from './styles';
 	import type { ContainerStylesProps } from './types';
 
-	type $$Props = HTMLAttributes<HTMLDivElement> & ContainerStylesProps;
+	interface $$Props extends HTMLAttributes<HTMLDivElement>, ContainerStylesProps {
+		root?: 'div' | 'section';
+	}
 
 	let className: string | undefined | null = undefined;
 
+	export let root: $$Props['root'] = 'div';
 	export let padding: $$Props['padding'] = undefined;
 	export { className as class };
 
 	$: containerClass = containerClassNameHandler({ padding });
 </script>
 
-<div {...$$restProps} class={twMerge(containerClass, className)}>
+<svelte:element this={root} {...$$restProps} class={twMerge(containerClass, className)}>
 	<slot />
-</div>
+</svelte:element>

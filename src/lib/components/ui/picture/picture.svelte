@@ -4,7 +4,7 @@
 
 	interface $$Props {
 		meta: ImgMeta[];
-		alt?: string;
+		alt: string;
 		loading?: 'lazy' | 'eager';
 		imageClass?: string;
 		pictureClass?: string;
@@ -13,7 +13,7 @@
 
 	export let meta: $$Props['meta'];
 
-	export let alt: $$Props['alt'] = undefined;
+	export let alt: $$Props['alt'];
 	export let loading: $$Props['loading'] = 'lazy';
 
 	export let imageClass: $$Props['imageClass'] = undefined;
