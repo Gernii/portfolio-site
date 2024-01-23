@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
+	import { pageRoutingHandler } from '$lib/utils/page-routing';
+
 	import * as m from '$i18n/messages';
 
 	import { LangSelector } from '../lang-selector';
@@ -13,6 +15,8 @@
 	}
 
 	export let sidenav: NonNullable<$$Props['sidenav']> = false;
+
+	const pageRouting = pageRoutingHandler();
 </script>
 
 <div
@@ -27,6 +31,9 @@
 			'flex-col p-4': sidenav
 		})}
 	>
+		<NavigatorItem href={pageRouting.about} target="_self" aria-label={m.about()}>
+			{m.about()}
+		</NavigatorItem>
 		<NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
 			{m.contact()}
 		</NavigatorItem>
