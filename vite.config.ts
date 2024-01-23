@@ -4,21 +4,21 @@ import { defineConfig } from 'vitest/config';
 import { imagetools } from 'vite-imagetools';
 
 const supportedExtensions = ['png', 'jpg', 'jpeg'];
-
+const defaultImageToolsWidth = '320;640;1280';
 
 export default defineConfig(({ mode }) => {
 	return {
 		plugins: [
 			imagetools({
 				defaultDirectives: (url) => {
-		
-					const extension = url.pathname.substring(
-						url.pathname.lastIndexOf('.') + 1
-					);
-		
+					const extension = url.pathname.substring(url.pathname.lastIndexOf('.') + 1);
+
 					if (supportedExtensions.includes(extension)) {
+						const width = url.searchParams.get('w') ?? undefined;
+
 						return new URLSearchParams({
 							format: 'avif;webp;' + extension,
+							w: width ?? defaultImageToolsWidth,
 							as: 'picture'
 						});
 					}

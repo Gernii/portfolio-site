@@ -10,3 +10,7 @@ declare module '*?imagetools' {
 	const outputs: ImgMeta[];
 	export default outputs;
 }
+declare module '*&imagetools' {
+	const outputs: ImgMeta[];
+	export default outputs;
+}
