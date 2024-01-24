@@ -1,3 +1,4 @@
 export const pageRoutingHandler = () => ({
-	about: '/about'
+	about: '/about',
+	home: '/'
 });

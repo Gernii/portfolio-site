@@ -16,8 +16,8 @@
 			<span class="font-normal">{m.aboutWithContextName()}</span>
 			<span><TextTypingEffect texts={[m.myNickName(), m.myName()]} /></span>
 		</SectionTitle>
-		<div class="flex flex-col gap-x-0 gap-y-6 sm:flex-row sm:gap-x-6 lg:gap-x-16">
-			<div class="mask mask-circle h-full max-w-52">
+		<div class="flex flex-col gap-x-0 gap-y-6 sm:gap-x-6 md:flex-row lg:gap-x-16">
+			<div class="mask mask-circle h-full w-52 flex-shrink-0">
 				<Picture meta={PersonalImage} alt={m.personalimage()} />
 			</div>
 			<div class="prose">

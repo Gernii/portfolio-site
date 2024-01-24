@@ -27,7 +27,7 @@
 	"about_person_line_2": "Sau khi có chiếc máy chơi game 8-bit đầu tiên, tôi bị thu hút bởi cách game được thiết kế, cách nhân vật di chuyển và cách game hoạt động. Từ đó, tôi bắt đầu đam mê với công nghệ",
 	"about_person_line_3_1": "Lần đầu tiên tôi tiếp xúc với Pascal là vào năm",
 	"about_person_line_3_tip_1": "Lớp 11, trường THPT Tây Thạnh",
-	"about_person_line_3_2": ". Đó là lúc tôi nhận ra nếu muốn tạo ra một trò chơi, tôi cần học cách lập trình, và\n\t\t\t\t\tPascal trở thành ngôn ngữ lập trình đầu tiên của tôi",
+	"about_person_line_3_2": ". Đó là lúc tôi nhận ra nếu muốn tạo ra một thứ gì đó tuyệt vời, tôi cần học cách lập trình, và\t\t\t\t\tPascal trở thành ngôn ngữ lập trình đầu tiên của tôi",
 	"about_person_line_4": "Sau đó, tôi tiếp tục học C++, JavaScript, HTML, CSS và nhiều ngôn ngữ khác",
 	"about_person_line_5_1": "Hiện tại, tôi là sinh viên ngành",
 	"about_person_line_5_2": "Công Nghệ Thông Tin",
@@ -38,5 +38,7 @@
 	"CoTAIDescription": "CoTAI là một studio khởi nghiệp chuyên về Trí tuệ nhân tạo",
 	"now": "Hiện tại",
 	"experience": "Kinh nghiệm",
-	"personalimage": "Hình ảnh cá nhân\""
+	"personalimage": "Hình ảnh cá nhân\"",
+	"home": "Trang chủ",
+	"pages": "Trang"
 }

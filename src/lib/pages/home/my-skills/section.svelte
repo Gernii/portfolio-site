@@ -26,7 +26,7 @@
 		<SectionTitle>{m.mySkills()}</SectionTitle>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.languages()}:</h2>
+			<h2 class="pt-4 text-xl font-semibold">{m.languages()}</h2>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard meta={HTMLPNG} tooltip="HTML" />
 				<SkillCard meta={CSSPNG} tooltip="CSS" />
@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.frameworksAndLibraries()}:</h2>
+			<h2 class="pt-4 text-xl font-semibold">{m.frameworksAndLibraries()}</h2>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard meta={ReactJSPNG} tooltip="React JS" />
 				<SkillCard meta={ReactJSPNG} tooltip="React Native" title="React N" />
@@ -51,14 +51,14 @@
 		</div>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.cloud()}:</h2>
+			<h2 class="pt-4 text-xl font-semibold">{m.cloud()}</h2>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard meta={AWSPNG} title="AWS" tooltip="Amazon Web Services" needBgWhite />
 			</div>
 		</div>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.tools()}:</h2>
+			<h2 class="pt-4 text-xl font-semibold">{m.tools()}</h2>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard meta={FigmaPNG} tooltip="Figma" />
 			</div>

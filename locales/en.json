@@ -27,7 +27,7 @@
 	"about_person_line_2": "After I got my first 8-bit game console, I began to love the design of games, how characters move, and how games work. From then, I developed a passion for technology",
 	"about_person_line_3_1": "I first encountered Pascal in",
 	"about_person_line_3_tip_1": "Grade 11, Tay Thanh High School",
-	"about_person_line_3_2": ". It was the first time I realized that if I wanted to create a game, I needed to learn how to code, and Pascal became the first language I learned",
+	"about_person_line_3_2": ". It was the first time I realized that if I wanted to create something cool, I needed to learn how to code, and Pascal became the first language I learned",
 	"about_person_line_4": "Subsequently, I delved into learning C++, JavaScript, HTML, CSS, and more",
 	"about_person_line_5_1": "Now, I am a student majoring in",
 	"about_person_line_5_2": "Information Technology",
@@ -38,5 +38,7 @@
 	"CoTAIDescription": "CoTAI is a startup studio specialized in Artificial Intelligence",
 	"now": "Now",
 	"experience": "Experience",
-	"personalimage": "Personal image"
+	"personalimage": "Personal image",
+	"home": "Home",
+	"pages": "Pages"
 }
