@@ -80,6 +80,11 @@ module.exports = {
 						group: 'external'
 					},
 					{
+						pattern: '$posts/**',
+						position: 'after',
+						group: 'external'
+					},
+					{
 						pattern: '$lib/components/ui/**',
 						position: 'after',
 						group: 'external'

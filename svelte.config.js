@@ -1,11 +1,35 @@
 import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { escapeSvelte, mdsvex } from 'mdsvex';
+import shiki from 'shiki';
+import remarkUnwrapImages from 'remark-unwrap-images';
+import remarkToc from 'remark-toc';
+import rehypeSlug from 'rehype-slug';
+
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+	extensions: ['.md'],
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const highlighter = await shiki.getHighlighter({ theme: 'poimandres' });
+			const html = escapeSvelte(highlighter.codeToHtml(code, { lang }));
+			return `{@html \`${html}\` }`;
+		}
+	},
+	layout: {
+		_: './src/lib/features/markdown/layout.svelte'
+	},
+	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }]],
+	rehypePlugins: [rehypeSlug]
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte', '.md'],
+
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
@@ -15,14 +39,14 @@ const config = {
 			routes: { exclude: ['<all>', '/sitemap.xml', '/robots.txt'] }
 		}),
 		alias: {
-			$i18n: './src/lib/libs/i18n/messages'
+			$i18n: './src/lib/libs/i18n/messages',
+			$posts: './src/posts'
 		},
 		output: {
 			preloadStrategy: 'preload-mjs'
 		},
 		prerender: {
 			handleHttpError: ({ path, message }) => {
-				console.log('path', path, message);
 				// ! ignore vite-imagetools urls
 				if (path.endsWith('/[object Object]') || path.endsWith('/[object%20Object]')) {
 					return;
