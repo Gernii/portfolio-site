@@ -40,5 +40,8 @@
 	"experience": "Experience",
 	"personalimage": "Personal image",
 	"home": "Home",
-	"pages": "Pages"
+	"pages": "Pages",
+	"siteNameWithTitle": "{title} | Duc Anh - Fullstack Developer",
+	"siteName": "Duc Anh - Fullstack Developer",
+	"siteDescription": "Le Ngo Duc Anh's personal website. This is my personal page, where I share about myself, skills, experiences, and my projects."
 }

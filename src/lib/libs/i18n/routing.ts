@@ -7,16 +7,21 @@ import { type AvailableLanguageTag, availableLanguageTags, sourceLanguageTag } f
 /**
  * Returns the path in the given language, regardless of which language the path is in.
  */
-export const route = (path: string, lang?: AvailableLanguageTag) => {
+export const route = (path: string, lang?: AvailableLanguageTag, needSlash?: boolean) => {
 	path = withoutLanguageTag(path);
 
 	const isStartWithSlash = path.startsWith('/');
 
+	const isHomePage = path === '' || path === '/';
+
 	// Don't prefix the default language
 	if (lang === sourceLanguageTag || lang === undefined) {
-		if (path === '') return `/${path}`;
-		if (isStartWithSlash) return `${path}`;
+		if (!needSlash && (isStartWithSlash || isHomePage)) return `${path}`;
 		return `/${path}`;
+	}
+
+	if (isHomePage) {
+		return `/${lang}`;
 	}
 
 	// Prefix all other languages
@@ -55,5 +60,6 @@ function withoutLanguageTag(path: string) {
 	if (availableLanguageTags.includes(maybeLang as AvailableLanguageTag)) {
 		return rest.join('/');
 	}
+
 	return path;
 }

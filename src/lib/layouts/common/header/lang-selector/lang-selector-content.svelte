@@ -21,7 +21,7 @@
 				class={cx('btn btn-ghost btn-block flex-nowrap justify-start', {
 					'btn-active pointer-events-none cursor-default': lang === $currentLang
 				})}
-				href={route($page.url.pathname, lang)}
+				href={route($page.url.pathname, lang, true)}
 				hreflang={lang}
 			>
 				<LangSelectorIcon {lang} />

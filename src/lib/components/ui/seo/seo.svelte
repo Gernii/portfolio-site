@@ -1,62 +1,57 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	import { PUBLIC_HOSTNAME } from '$env/static/public';
+	import { PUBLIC_GITHUB, PUBLIC_HOSTNAME, PUBLIC_LINKEDIN } from '$env/static/public';
 
-	import SvelteSeo from 'svelte-seo';
+	// import SvelteSeo from 'svelte-seo';
+	import type { Thing, WithContext } from 'schema-dts';
 
 	import * as m from '$i18n/messages';
+	import { languageTag } from '$i18n/runtime';
+
+	import { serializeSchema } from './handler';
 
 	interface $$Props {
 		title?: string;
 		description?: string;
-		SEOImage?: string;
+		image?: string;
+		JsonLD?: Thing | WithContext<Thing>;
 	}
 
-	$: urlPathName = $page.url.pathname !== '/' ? $page.url.pathname : '';
-
 	export let title: $$Props['title'] = undefined;
-	export let description: $$Props['description'] = undefined;
-	export let SEOImage: $$Props['SEOImage'] = undefined;
+	export let description: NonNullable<$$Props['description']> = m.siteDescription();
+	export let image: NonNullable<$$Props['image']> = `${PUBLIC_HOSTNAME}/personal-image.jpg`;
+	export let JsonLD: NonNullable<$$Props['JsonLD']> = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Le Ngo Duc Anh',
+		jobTitle: 'Full-stack developer',
+		url: PUBLIC_HOSTNAME,
+		gender: 'male',
+		image,
+		sameAs: [PUBLIC_GITHUB, PUBLIC_LINKEDIN]
+	};
+	$: currentPage = `${PUBLIC_HOSTNAME}${$page.url.pathname !== '/' ? $page.url.pathname : ''}`;
 
-	let hostname = PUBLIC_HOSTNAME;
-
-	$: imageUrl = SEOImage ?? `${hostname}/images/logo/CoTAI-Ver0-320.png`;
-
-	$: contentTitle = title ? m.siteNameWithTitle({ title }) : m.siteName();
+	$: formattedTitle = title ? m.siteNameWithTitle({ title }) : m.siteName();
 </script>
 
 <svelte:head>
-	<link rel="canonical" href={`${hostname}${urlPathName}`} />
-	<link rel="manifest" href="/manifest.json" />
+	<title>{formattedTitle}</title>
+	<meta name="description" content={description} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content={currentPage} />
+	<meta name="twitter:title" content={formattedTitle} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={image} />
+	<meta name="twitter:image:alt" content={formattedTitle} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={currentPage} />
+	<meta property="og:title" content={formattedTitle} />
+	<meta property="og:description" content={description} />
+	<meta property="og:site_name" content={formattedTitle} />
+	<meta property="og:image" content={image} />
+	<meta property="og:locale" content={languageTag()} />
+	<link rel="canonical" href={currentPage} />
+	{@html serializeSchema(JsonLD)}
 </svelte:head>
-<SvelteSeo
-	title={contentTitle}
-	{description}
-	openGraph={{
-		title: contentTitle,
-		type: 'website',
-		url: `${hostname}${urlPathName}`,
-		site_name: m.siteName(),
-		description,
-		images: [
-			{
-				url: imageUrl,
-				alt: m.siteName()
-			}
-		]
-	}}
-	twitter={{
-		card: 'summary_large_image',
-		title: contentTitle,
-		description,
-		image: imageUrl
-	}}
-	jsonLd={{
-		'@context': 'https://schema.org',
-		'@type': 'WebSite',
-		url: hostname,
-		description: m.homePage_head_description(),
-		name: m.siteName()
-	}}
-/>

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
+	import { PUBLIC_EMAIL, PUBLIC_GITHUB, PUBLIC_LINKEDIN } from '$env/static/public';
+
 	import { Container, ContainerContent } from '$lib/components/ui/container';
 
 	import { pageRoutingHandler } from '$lib/utils/page-routing';
@@ -25,11 +27,11 @@
 				<div class="flex flex-col gap-10 lg:flex-row">
 					<PageNav root="address" title={m.contact()}>
 						<p>
-							<a href="mailto:anhducngole2001@gmail.com" class="link-hover link">Email</a>
+							<a href={`mailto:${PUBLIC_EMAIL}`} class="link-hover link">Email</a>
 						</p>
 						<p>
 							<a
-								href="https://github.com/Gernii"
+								href={PUBLIC_GITHUB}
 								class="link-hover link"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -39,7 +41,7 @@
 						</p>
 						<p>
 							<a
-								href="https://www.linkedin.com/in/gernii"
+								href={PUBLIC_LINKEDIN}
 								class="link-hover link"
 								target="_blank"
 								rel="noopener noreferrer"
