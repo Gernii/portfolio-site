@@ -43,5 +43,10 @@
 	"pages": "Pages",
 	"siteNameWithTitle": "{title} | Duc Anh - Fullstack Developer",
 	"siteName": "Duc Anh - Fullstack Developer",
-	"siteDescription": "Le Ngo Duc Anh's personal website. This is my personal page, where I share about myself, skills, experiences, and my projects."
+	"siteDescription": "Le Ngo Duc Anh's personal website. This is my personal page, where I share about myself, skills, experiences, and my projects.",
+	"error404_title": "UH OH! You're lost.",
+	"error404_description": "The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.",
+	"error_image": "Error image",
+	"error500_title": "UH OH! There are something wrong with server",
+	"error500_description": "Current page is down, please try again"
 }

@@ -43,5 +43,10 @@
 	"pages": "Trang",
 	"siteNameWithTitle": "{title} | Đức Anh - Fullstack Developer",
 	"siteName": "Đức Anh - Fullstack Developer",
-	"siteDescription": "Trang web cá nhân của Lê Ngô Đức Anh. Đây là trang cá nhân của tôi, nơi tôi chia sẻ về bản thân, kỹ năng, kinh nghiệm và các dự án của tôi"
+	"siteDescription": "Trang web cá nhân của Lê Ngô Đức Anh. Đây là trang cá nhân của tôi, nơi tôi chia sẻ về bản thân, kỹ năng, kinh nghiệm và các dự án của tôi",
+	"error404_title": "UH OH! Bạn bị lạc rồi.",
+	"error404_description": "Trang mà bạn đang tìm không tồn tại. Cách bạn đến đây thật là bí ẩn. Nhưng bạn có thể nhấn nút dưới đây để quay về trang chủ.",
+	"error_image": "Hình ảnh minh hoạ lỗi",
+	"error500_title": "UH OH! Hệ thống đang gặp vấn đề",
+	"error500_description": "Trang này hiện đang gặp vấn đề. Vui lòng thử lại sau."
 }

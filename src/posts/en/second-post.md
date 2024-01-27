@@ -11,4 +11,4 @@ published: true
 ## Svelte
 
 Media inside the **static** folder is served from `/`.
-![Svelte](/favicon.png)
+![Svelte](/favicon/favicon-96x96.png)
