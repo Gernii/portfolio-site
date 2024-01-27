@@ -404,27 +404,27 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **JavaScript Inline:** :red_circle: You don't have any JavaScript code inline (mixed with your HTML code).
-- [ ] **Concatenation:** :red_circle: JavaScript files are concatenated.
-- [ ] **Minification:** :red_circle: JavaScript files are minified (you can add the `.min` suffix).
+- [x] **JavaScript Inline:** :red_circle: You don't have any JavaScript code inline (mixed with your HTML code).
+- [x] **Concatenation:** :red_circle: JavaScript files are concatenated.
+- [x] **Minification:** :red_circle: JavaScript files are minified (you can add the `.min` suffix).
 
 > - 📖 [Minify Resources (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
 
-- [ ] **JavaScript security:** :red_circle:
+- [x] **JavaScript security:** :red_circle:
 
 > - 📖 [Guidelines for Developing Secure Applications Utilizing JavaScript](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
-- [ ] **`noscript` tag:** :orange_circle: Use `<noscript>` tag in the HTML body if a script type on the page is unsupported or if scripting is currently turned off in the browser. This will be helpful in client-side rendering heavy apps such as React.js, see [examples](https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498).
+- [x] **`noscript` tag:** :orange_circle: Use `<noscript>` tag in the HTML body if a script type on the page is unsupported or if scripting is currently turned off in the browser. This will be helpful in client-side rendering heavy apps such as React.js, see [examples](https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498).
 
 ```html
 <noscript> You need to enable JavaScript to run this app. </noscript>
 ```
 
-- [ ] **Non-blocking:** :orange_circle: JavaScript files are loaded asynchronously using `async` or deferred using `defer` attribute.
+- [x] **Non-blocking:** :orange_circle: JavaScript files are loaded asynchronously using `async` or deferred using `defer` attribute.
 
 > - 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-- [ ] **Optimized and updated JS libraries:** :orange_circle: All JavaScript libraries used in your project are necessary (prefer Vanilla Javascript for simple functionalities), updated to their latest version and don't overwhelm your JavaScript with unnecessary methods.
+- [x] **Optimized and updated JS libraries:** :orange_circle: All JavaScript libraries used in your project are necessary (prefer Vanilla Javascript for simple functionalities), updated to their latest version and don't overwhelm your JavaScript with unnecessary methods.
 
 > - 📖 [You may not need jQuery](http://youmightnotneedjquery.com/)
 > - 📖 [Vanilla JavaScript for building powerful web applications](https://plainjs.com/)
@@ -435,7 +435,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### JavaScript testing
 
-- [ ] **ESLint:** :red_circle: No errors are flagged by ESLint (based on your configuration or standards rules).
+- [x] **ESLint:** :red_circle: No errors are flagged by ESLint (based on your configuration or standards rules).
 
 > - 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
 
