@@ -371,7 +371,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **Optimization:** :red_circle: All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
+- [x] **Optimization:** :red_circle: All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
 
 > - 🛠 [Imagemin](https://github.com/imagemin/imagemin)
 > - 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
@@ -382,18 +382,18 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 🛠 [SVGO](https://github.com/svg/svgo) a Nodejs-based tool for optimizing SVG vector graphics files.
 > - 🛠 [SVGOMG](https://jakearchibald.github.io/svgomg/) a web-based GUI version of SVGO for optimising your svgs online.
 
-- [ ] **Picture/Srcset:** :orange_circle: You use picture/srcset to provide the most appropriate image for the current viewport of the user.
+- [x] **Picture/Srcset:** :orange_circle: You use picture/srcset to provide the most appropriate image for the current viewport of the user.
 
 > - 📖 [How to Build Responsive Images with srcset](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
 
 - [ ] **Retina:** :large_blue_circle: You provide layout images 2x or 3x, support retina display.
-- [ ] **Sprite:** :orange_circle: Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
-- [ ] **Width and Height:** :red_circle: Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
-- [ ] **Alternative text:** :red_circle: All `<img>` have an alternative text which describes the image visually.
+- [x] **Sprite:** :orange_circle: Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
+- [x] **Width and Height:** :red_circle: Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
+- [x] **Alternative text:** :red_circle: All `<img>` have an alternative text which describes the image visually.
 
 > - 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
 
-- [ ] **Lazy loading:** :orange_circle: Images are lazyloaded (A noscript fallback is always provided).
+- [x] **Lazy loading:** :orange_circle: Images are lazyloaded (A noscript fallback is always provided).
   > - 🛠 [Native lazy loading polyfill](https://github.com/mfranzke/loading-attribute-polyfill/)
 
 **[⬆ back to top](#table-of-contents)**
