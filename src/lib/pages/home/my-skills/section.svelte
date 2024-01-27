@@ -26,7 +26,7 @@
 		<SectionTitle>{m.mySkills()}</SectionTitle>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.languages()}</h2>
+			<h3 class="pt-4 text-xl font-semibold">{m.languages()}</h3>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard tooltip="HTML">
 					<LogosHtml5 class={iconClassName} />
@@ -47,7 +47,7 @@
 		</div>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.frameworksAndLibraries()}</h2>
+			<h3 class="pt-4 text-xl font-semibold">{m.frameworksAndLibraries()}</h3>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard tooltip="React JS">
 					<LogosReact class={iconClassName} />
@@ -74,7 +74,7 @@
 		</div>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.cloud()}</h2>
+			<h3 class="pt-4 text-xl font-semibold">{m.cloud()}</h3>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard title="AWS" tooltip="Amazon Web Services" needBgWhite>
 					<LogosAws class={iconClassName} />
@@ -83,7 +83,7 @@
 		</div>
 
 		<div class="space-y-2">
-			<h2 class="pt-4 text-xl font-semibold">{m.tools()}</h2>
+			<h3 class="pt-4 text-xl font-semibold">{m.tools()}</h3>
 			<div class="flex flex-row flex-wrap gap-x-6 gap-y-4">
 				<SkillCard tooltip="Figma">
 					<LogosFigma class={iconClassName} />

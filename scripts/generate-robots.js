@@ -10,7 +10,6 @@ export const generateRobots = (outDir, sitemaps) => {
 		'User-agent: *',
 		'Allow: /',
 		'Disallow: /admin',
-		'Disallow: /en',
 		'Disallow: /*.js$',
 		'Disallow: /*.json'
 	];

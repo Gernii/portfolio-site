@@ -452,7 +452,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **HTTPS:** :red_circle: HTTPS is used on every page and for all external content (plugins, images...).
+- [x] **HTTPS:** :red_circle: HTTPS is used on every page and for all external content (plugins, images...).
 
 > - 🛠 [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 > - 🛠 [Free SSL Server Test](https://www.ssllabs.com/ssltest/index.html)
@@ -464,25 +464,25 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 📖 [HTTP Strict Transport Security Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 > - 📖 [Transport Layer Protection Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 
-- [ ] **Cross Site Request Forgery (CSRF):** :red_circle: You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
+- [x] **Cross Site Request Forgery (CSRF):** :red_circle: You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
 
 > - 📖 [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 
-- [ ] **Cross Site Scripting (XSS):** :red_circle: Your page or website is free from XSS possible issues.
+- [x] **Cross Site Scripting (XSS):** :red_circle: Your page or website is free from XSS possible issues.
 
 > - 📖 [XSS (Cross Site Scripting) Prevention Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
 > - 📖 [DOM based XSS Prevention Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
 
-- [ ] **Content Type Options:** :orange_circle: Prevents Google Chrome and Internet Explorer from trying to mime-sniff the content-type of a response away from the one being declared by the server.
+- [x] **Content Type Options:** :orange_circle: Prevents Google Chrome and Internet Explorer from trying to mime-sniff the content-type of a response away from the one being declared by the server.
 
 > - 📖 [X-Content-Type-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options)
 
-- [ ] **X-Frame-Options (XFO):** :orange_circle: Protects your visitors against clickjacking attacks.
+- [x] **X-Frame-Options (XFO):** :orange_circle: Protects your visitors against clickjacking attacks.
 
 > - 📖 [X-Frame-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options)
 > - 📖 [RFC7034 - HTTP Header Field X-Frame-Options](https://tools.ietf.org/html/rfc7034)
 
-- [ ] **Content Security Policy:** :orange_circle: Defines how content is loaded on your site and from where it is permitted to be loaded. Can also be used to protect against clickjacking attacks.
+- [x] **Content Security Policy:** :orange_circle: Defines how content is loaded on your site and from where it is permitted to be loaded. Can also be used to protect against clickjacking attacks.
 
 > - 📖 [Content Security Policy - An Introduction - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
 > - 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
@@ -497,7 +497,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **Goals to achieve:** :orange_circle: Your pages should reach these goals:
+- [x] **Goals to achieve:** :orange_circle: Your pages should reach these goals:
   - First Meaningful Paint under 1 second
   - Time To Interactive under 5 seconds for the "average" configuration (a $200 Android on a slow 3G network with 400ms RTT and 400kbps transfer speed) and under 2 seconds for repeat visits
   - Critical file size under 170Kb gzipped
@@ -506,17 +506,17 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 🛠 [WebPageTest](https://www.webpagetest.org/)
 > - 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
-- [ ] **Minified HTML:** :orange_circle: Your HTML is minified.
+- [x] **Minified HTML:** :orange_circle: Your HTML is minified.
 
-- [ ] **Lazy loading:** :orange_circle: Images, scripts and CSS need to be lazy loaded to improve the response time of the current page (See details in their respective sections).
+- [x] **Lazy loading:** :orange_circle: Images, scripts and CSS need to be lazy loaded to improve the response time of the current page (See details in their respective sections).
 
-- [ ] **Cookie size:** :orange_circle: If you are using cookies be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
+- [x] **Cookie size:** :orange_circle: If you are using cookies be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
 
 > - 📖 [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 > - 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 > - 🛠 [Browser Cookie Limits](http://browsercookielimits.squawky.net/)
 
-- [ ] **Third party components:** :orange_circle: Third party iframes or components relying on external JS (like sharing buttons) are replaced by static components when possible, thus limiting calls to external APIs and keeping your user's activity private.
+- [x] **Third party components:** :orange_circle: Third party iframes or components relying on external JS (like sharing buttons) are replaced by static components when possible, thus limiting calls to external APIs and keeping your user's activity private.
 
 > - 🛠 [Simple sharing buttons generator](https://simplesharingbuttons.com/)
 
@@ -552,7 +552,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Performance testing
 
-- [ ] **Google PageSpeed:** :red_circle: All your pages were tested (not only the homepage) and have a score of at least 90/100.
+- [x] **Google PageSpeed:** :red_circle: All your pages were tested (not only the homepage) and have a score of at least 90/100.
 
 > - 🛠 [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 > - 🛠 [Test your mobile speed with Google](https://testmysite.withgoogle.com)
@@ -570,7 +570,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **Progressive enhancement:** :orange_circle: Major functionality like main navigation and search should work without JavaScript enabled.
+- [x] **Progressive enhancement:** :orange_circle: Major functionality like main navigation and search should work without JavaScript enabled.
 
 > - 📖 [Enable / Disable JavaScript in Chrome Developer Tools](https://www.youtube.com/watch?v=kBmvq2cE0D8)
 
@@ -580,20 +580,20 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 #### Headings
 
-- [ ] **H1:** :red_circle: All pages have an H1 which is not the title of the website.
-- [ ] **Headings:** :red_circle: Headings should be used properly and in the right order (H1 to H6).
+- [x] **H1:** :red_circle: All pages have an H1 which is not the title of the website.
+- [x] **Headings:** :red_circle: Headings should be used properly and in the right order (H1 to H6).
 
 > - 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
 ### Semantics
 
-- [ ] **Specific HTML5 input types are used:** :orange_circle: This is especially important for mobile devices that show customized keypads and widgets for different types.
+- [x] **Specific HTML5 input types are used:** :orange_circle: This is especially important for mobile devices that show customized keypads and widgets for different types.
 
 > - 📖 [Mobile Input Types](http://mobileinputtypes.com/)
 
 ### Form
 
-- [ ] **Label:** :red_circle: A label is associated with each input form element. In case a label can't be displayed, use `aria-label` instead.
+- [x] **Label:** :red_circle: A label is associated with each input form element. In case a label can't be displayed, use `aria-label` instead.
 
 > - 📖 [Using the aria-label attribute - MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 
@@ -603,9 +603,9 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 > - 🛠 [Wave testing](http://wave.webaim.org/)
 
-- [ ] **Keyboard navigation:** :red_circle: Test your website using only your keyboard in a previsible order. All interactive elements are reachable and usable.
-- [ ] **Screen-reader:** :orange_circle: All pages were tested in a screen-reader (VoiceOver, ChromeVox, NVDA or Lynx).
-- [ ] **Focus style:** :red_circle: If the focus is disabled, it is replaced by visible state in CSS.
+- [x] **Keyboard navigation:** :red_circle: Test your website using only your keyboard in a previsible order. All interactive elements are reachable and usable.
+- [x] **Screen-reader:** :orange_circle: All pages were tested in a screen-reader (VoiceOver, ChromeVox, NVDA or Lynx).
+- [x] **Focus style:** :red_circle: If the focus is disabled, it is replaced by visible state in CSS.
 
 > - 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
@@ -624,20 +624,20 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 > - 🛠 [Search Console](https://search.google.com/search-console/about)
 
-- [ ] **Headings logic:** :orange_circle: Heading text helps to understand the content in the current page.
+- [x] **Headings logic:** :orange_circle: Heading text helps to understand the content in the current page.
 
 > - 🛠 [Tota11y, tab Headings](http://khan.github.io/tota11y/#Try-it)
 
-- [ ] **sitemap.xml:** :red_circle: A sitemap.xml exists and was submitted to Google Search Console (previously Google Webmaster Tools).
+- [x] **sitemap.xml:** :red_circle: A sitemap.xml exists and was submitted to Google Search Console (previously Google Webmaster Tools).
 
 > - 🛠 [Sitemap generator](https://websiteseochecker.com/html-sitemap-generator/)
 
-- [ ] **robots.txt:** :red_circle: The robots.txt is not blocking webpages.
+- [x] **robots.txt:** :red_circle: The robots.txt is not blocking webpages.
 
 > - 📖 [The robots.txt file](https://varvy.com/robottxt.html)
 > - 🛠 Test your robots.txt with [Google Robots Testing Tool](https://www.google.com/webmasters/tools/robots-testing-tool)
 
-- [ ] **Structured Data:** :red_circle: Pages using structured data are tested and are without errors. Structured data helps crawlers understand the content in the current page.
+- [x] **Structured Data:** :red_circle: Pages using structured data are tested and are without errors. Structured data helps crawlers understand the content in the current page.
 
 > - 📖 [Introduction to Structured Data - Search - Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > - 📖 [JSON-LD](https://json-ld.org/)
@@ -645,7 +645,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 🛠 Test your page with the [Rich Results Test](https://search.google.com/test/rich-results)
 > - 🛠 Complete list of vocabularies that can be used as structured data. [Schema.org Full Hierarchy](http://schema.org/docs/full.html)
 
-- [ ] **Sitemap HTML:** :orange_circle: An HTML sitemap is provided and is accessible via a link in the footer of your website.
+- [x] **Sitemap HTML:** :orange_circle: An HTML sitemap is provided and is accessible via a link in the footer of your website.
 
 > - 📖 [Sitemap guidelines - Google Support](https://support.google.com/webmasters/answer/183668?hl=en)
 
