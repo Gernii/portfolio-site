@@ -1,7 +1,7 @@
-<script>
-	import { IconBars3 } from '$lib/components/icons';
+<script lang="ts">
+	import LucideAlignJustify from '~icons/lucide/align-justify';
 </script>
 
 <label for="my-drawer" class="btn btn-square btn-ghost btn-primary drawer-button">
-	<IconBars3 class="size-6" />
+	<LucideAlignJustify />
 </label>

@@ -41,20 +41,6 @@ const config = {
 		alias: {
 			$i18n: './src/lib/libs/i18n/messages',
 			$posts: './src/posts'
-		},
-		output: {
-			preloadStrategy: 'preload-mjs'
-		},
-		prerender: {
-			handleHttpError: ({ path, message }) => {
-				// ! ignore vite-imagetools urls
-				if (path.endsWith('/[object Object]') || path.endsWith('/[object%20Object]')) {
-					return;
-				}
-
-				// otherwise fail the build
-				throw new Error(message);
-			}
 		}
 	}
 };

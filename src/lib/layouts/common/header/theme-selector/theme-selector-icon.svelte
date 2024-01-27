@@ -1,14 +1,11 @@
 <script lang="ts">
-	import { cx } from 'cva';
-
-	import { IconMoon, IconSun } from '$lib/components/icons';
-
-	$: iconClasses = cx('inline-block w-7');
+	import LucideMoon from '~icons/lucide/moon';
+	import LucideSun from '~icons/lucide/sun';
 </script>
 
 <div class="block dark:hidden">
-	<IconSun class={iconClasses} />
+	<LucideSun />
 </div>
 <div class="hidden dark:block">
-	<IconMoon class={iconClasses} />
+	<LucideMoon />
 </div>

@@ -4,10 +4,11 @@
 	import { DARK_THEME, LIGHT_THEME, SYSTEM_THEME } from './constants';
 	import ThemeSelectorItem from './theme-selector-item.svelte';
 
-	import { IconComputerDesktop, IconMoon, IconSun } from '$lib/components/icons';
+	import LucideMoon from '~icons/lucide/moon';
+	import LucideLaptop from '~icons/lucide/laptop';
+	import LucideSun from '~icons/lucide/sun';
 
 	let currentTheme: string | undefined = undefined;
-
 	onMount(() => {
 		const theme = localStorage.getItem('theme') ?? undefined;
 		currentTheme = theme;
@@ -45,15 +46,15 @@
 		active={currentTheme === LIGHT_THEME}
 		on:click={() => themeToggle(LIGHT_THEME)}
 	>
-		<IconSun class="size-5" /> Sáng
+		<LucideSun /> Sáng
 	</ThemeSelectorItem>
 	<ThemeSelectorItem active={currentTheme === DARK_THEME} on:click={() => themeToggle(DARK_THEME)}>
-		<IconMoon class="size-5" /> Tối
+		<LucideMoon /> Tối
 	</ThemeSelectorItem>
 	<ThemeSelectorItem
 		active={currentTheme === SYSTEM_THEME}
 		on:click={() => themeToggle(SYSTEM_THEME)}
 	>
-		<IconComputerDesktop class="size-5" /> <span class="whitespace-nowrap">Hệ thống</span>
+		<LucideLaptop /> <span class="whitespace-nowrap">Hệ thống</span>
 	</ThemeSelectorItem>
 </ul>
