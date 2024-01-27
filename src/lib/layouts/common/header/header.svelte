@@ -2,6 +2,8 @@
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 
+	import { pageRoutingHandler } from '$lib/utils/page-routing';
+
 	import { HeaderScrollContext } from './context';
 	import { Navigator } from './navigator';
 	import { SidenavTrigger } from './sidenav';
@@ -45,6 +47,8 @@
 			return false;
 		}
 	};
+
+	const pageRouting = pageRoutingHandler();
 </script>
 
 <svelte:window on:scroll={onScrollHandler} />
@@ -55,7 +59,7 @@
 			<SidenavTrigger />
 		</div>
 		<div class="h-full flex-shrink-0 max-lg:navbar-center">
-			<a href={navigate('/')} class="text-2xl font-bold"> Gernii </a>
+			<a href={navigate(pageRouting.home)} class="text-2xl font-bold"> Gernii </a>
 		</div>
 
 		<div class="hidden lg:block">

@@ -7,16 +7,15 @@ import { type AvailableLanguageTag, availableLanguageTags, sourceLanguageTag } f
 /**
  * Returns the path in the given language, regardless of which language the path is in.
  */
-export const route = (path: string, lang?: AvailableLanguageTag, needSlash?: boolean) => {
+export const route = (path: string, lang?: AvailableLanguageTag) => {
 	path = withoutLanguageTag(path);
-
 	const isStartWithSlash = path.startsWith('/');
 
 	const isHomePage = path === '' || path === '/';
 
 	// Don't prefix the default language
 	if (lang === sourceLanguageTag || lang === undefined) {
-		if (!needSlash && (isStartWithSlash || isHomePage)) return `${path}`;
+		if (isStartWithSlash || isHomePage) return `${path}`;
 		return `/${path}`;
 	}
 
@@ -39,7 +38,7 @@ export const navigate = (path: string) => {
 	if (lang === sourceLanguageTag) return pathWithoutLanguage;
 
 	// Prefix all other languages
-	return `/${lang}${pathWithoutLanguage}`;
+	return `/${lang}${pathWithoutLanguage === '/' ? '' : pathWithoutLanguage}`;
 };
 
 export const currentLang = derived(page, (a) => {

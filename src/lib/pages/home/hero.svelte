@@ -8,7 +8,7 @@
 
 <section class="h-dvh overflow-hidden">
 	<ContainerContent class="grid h-full content-center">
-		<div class="text-shadow-sm w-full shadow-base-content/5">
+		<hgroup class="text-shadow-sm w-full shadow-base-content/5">
 			<p class="text-base font-semibold sm:text-xl">{m.hi_im()}</p>
 			<p class="text-3xl font-bold text-primary sm:text-6xl">
 				<TextTypingEffect texts={[m.myNickName(), m.myFullName()]} />
@@ -22,6 +22,6 @@
 					]}
 				/>
 			</p>
-		</div>
+		</hgroup>
 	</ContainerContent>
 </section>

@@ -16,12 +16,13 @@
 	class="dropdown-content z-[1] space-y-1 rounded-box bg-base-100 p-2 shadow shadow-base-content/5"
 >
 	{#each availableLanguageTags as lang}
+		{@const href = route($page.url.pathname, lang)}
 		<li>
 			<a
 				class={cx('btn btn-ghost btn-block flex-nowrap justify-start', {
 					'btn-active pointer-events-none cursor-default': lang === $currentLang
 				})}
-				href={route($page.url.pathname, lang, true)}
+				href={href !== '' ? href : '/'}
 				hreflang={lang}
 			>
 				<LangSelectorIcon {lang} />

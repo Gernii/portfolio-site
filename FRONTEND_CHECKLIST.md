@@ -288,11 +288,11 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 > **Notes:** Take a look at [CSS guidelines](https://cssguidelin.es/) and [Sass Guidelines](https://sass-guidelin.es/) followed by most Front-End developers. If you have a doubt about CSS properties, you can visit [CSS Reference](http://cssreference.io/). There is also a short [Code Guide](http://codeguide.co/) for consistency.
 
-- [ ] **Responsive Web Design:** :red_circle: The website is using responsive web design.
-- [ ] **CSS Print:** :orange_circle: A print stylesheet is provided and is correct on each page.
-- [ ] **Preprocessors:** :large_blue_circle: Your project is using a CSS preprocessor (e.g [Sass](http://sass-lang.com/), [Less](http://lesscss.org/), [Stylus](http://stylus-lang.com/)).
-- [ ] **Unique ID:** :red_circle: If IDs are used, they are unique to a page.
-- [ ] **Reset CSS:** :red*circle: A CSS reset (reset, normalize or reboot) is used and up to date. *(If you are using a CSS Framework like Bootstrap or Foundation, a Normalize is already included into it.)\_
+- [x] **Responsive Web Design:** :red_circle: The website is using responsive web design.
+- [x] **CSS Print:** :orange_circle: A print stylesheet is provided and is correct on each page.
+- [x] **Preprocessors:** :large_blue_circle: Your project is using a CSS preprocessor (e.g [Sass](http://sass-lang.com/), [Less](http://lesscss.org/), [Stylus](http://stylus-lang.com/)).
+- [x] **Unique ID:** :red_circle: If IDs are used, they are unique to a page.
+- [x] **Reset CSS:** :red*circle: A CSS reset (reset, normalize or reboot) is used and up to date. *(If you are using a CSS Framework like Bootstrap or Foundation, a Normalize is already included into it.)\_
 
 > - 📖 [Reset.css](https://meyerweb.com/eric/tools/css/reset/)
 > - 📖 [Normalize.css](https://necolas.github.io/normalize.css/)
@@ -307,21 +307,21 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 </div>
 ```
 
-- [ ] **embedded or inline CSS:** :red_circle: Avoid at all cost embedding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
-- [ ] **Vendor prefixes:** :red_circle: CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
+- [x] **embedded or inline CSS:** :red_circle: Avoid at all cost embedding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
+- [x] **Vendor prefixes:** :red_circle: CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
 
 > - 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
 
 ### Performance
 
-- [ ] **Concatenation:** :red*circle: CSS files are concatenated in a single file *(Not for HTTP/2)\_.
-- [ ] **Minification:** :red_circle: All CSS files are minified.
-- [ ] **Non-blocking:** :orange_circle: CSS files need to be non-blocking to prevent the DOM from taking time to load.
+- [x] **Concatenation:** :red*circle: CSS files are concatenated in a single file *(Not for HTTP/2)\_.
+- [x] **Minification:** :red_circle: All CSS files are minified.
+- [x] **Non-blocking:** :orange_circle: CSS files need to be non-blocking to prevent the DOM from taking time to load.
 
 > - 📖 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
 > - 📖 [Example of preload CSS using loadCSS](https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf)
 
-- [ ] **Unused CSS:** :large_blue_circle: Remove unused CSS.
+- [x] **Unused CSS:** :large_blue_circle: Remove unused CSS.
 
 > - 🛠 [UnCSS Online](https://uncss-online.com/)
 > - 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
@@ -330,12 +330,12 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### CSS testing
 
-- [ ] **Stylelint:** :red_circle: All CSS or SCSS files are without any errors.
+- [x] **Stylelint:** :red_circle: All CSS or SCSS files are without any errors.
 
 > - 🛠 [stylelint, a CSS linter](https://stylelint.io/)
 > - 📖 [Sass guidelines](https://sass-guidelin.es/)
 
-- [ ] **Responsive web design:** :red_circle: All pages were tested at the following breakpoints: 320px, 768px, 1024px (can be more / different according to your analytics).
+- [x] **Responsive web design:** :red_circle: All pages were tested at the following breakpoints: 320px, 768px, 1024px (can be more / different according to your analytics).
       **Responsive Checker -**
 
   > - 🛠 [Am I Responsive?](http://ami.responsivedesign.is/)
@@ -344,19 +344,19 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
   > - 🛠 [Responsinator](https://www.responsinator.com/)
   > - 🛠 [XRespond](https://xrespond.com/)
 
-- [ ] **CSS Validator:** :orange_circle: The CSS was tested and pertinent errors were corrected.
+- [x] **CSS Validator:** :orange_circle: The CSS was tested and pertinent errors were corrected.
 
 > - 🛠 [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-- [ ] **Desktop Browsers:** :red_circle: All pages were tested on all current desktop browsers (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
-- [ ] **Mobile Browsers:** :red_circle: All pages were tested on all current mobile browsers (Native browser, Chrome, Safari...).
-- [ ] **OS:** :red_circle: All pages were tested on all current OS (Windows, Android, iOS, Mac...).
+- [x] **Desktop Browsers:** :red_circle: All pages were tested on all current desktop browsers (Safari, Firefox, Chrome, Internet Explorer, EDGE...).
+- [x] **Mobile Browsers:** :red_circle: All pages were tested on all current mobile browsers (Native browser, Chrome, Safari...).
+- [x] **OS:** :red_circle: All pages were tested on all current OS (Windows, Android, iOS, Mac...).
 
 - [ ] **Design fidelity:** :large_blue_circle: Depending on the project and the quality of the creatives, you may be asked to be close to the design. You can use some tools to compare creatives with your code implementation and ensure consistency.
 
 > [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
-- [ ] **Reading direction:** :red_circle: All pages need to be tested for LTR and RTL languages if they need to be supported.
+- [x] **Reading direction:** :red_circle: All pages need to be tested for LTR and RTL languages if they need to be supported.
 
 > - 📖 [Building RTL-Aware Web Apps & Websites: Part 1 - Mozilla Hacks](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/)
 > - 📖 [Building RTL-Aware Web Apps & Websites: Part 2 - Mozilla Hacks](https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/)
