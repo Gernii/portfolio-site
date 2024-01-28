@@ -15,7 +15,7 @@
 
 	$: pd = $page.data as { meta: Post; content: any };
 
-	const JsonLDData: WithContext<Thing> = {
+	$: JsonLDData = {
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
 		image: pd.meta.thumbnail,
@@ -56,7 +56,7 @@
 		},
 		mainEntityOfPage: 'True',
 		keywords: pd.meta.categories
-	};
+	} as WithContext<Thing>;
 </script>
 
 <SEO
