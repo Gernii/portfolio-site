@@ -10,7 +10,7 @@ export const load = async ({ params }) => {
 	const blogName = params.blog;
 
 	try {
-		const post = await import(`../../../../posts/${lang}/${blogName}.md`);
+		const post = await import(`../../../../blogs/${lang}/${blogName}.md`);
 		console.log(post.default);
 
 		return {

@@ -2,19 +2,19 @@ import { json } from '@sveltejs/kit';
 
 import type { Post } from '$lib/utils/types';
 
-async function getPosts(lang?: string) {
-	let posts: Post[] = [];
+async function getBlogs(lang?: string) {
+	let blogs: Post[] = [];
 
 	let paths: Record<string, unknown>;
 	// ! import.meta.glob need to hardcode the path to work
 	switch (lang) {
 		case 'en':
-			paths = import.meta.glob(`/src/posts/en/*.md`, {
+			paths = import.meta.glob(`/src/blogs/en/*.md`, {
 				eager: true
 			});
 			break;
 		default:
-			paths = import.meta.glob(`/src/posts/vi/*.md`, {
+			paths = import.meta.glob(`/src/blogs/vi/*.md`, {
 				eager: true
 			});
 			break;
@@ -27,20 +27,22 @@ async function getPosts(lang?: string) {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
 			const post = { ...metadata, slug } satisfies Post;
-			post.published && posts.push(post);
+			post.published && blogs.push(post);
 		}
 	}
 
-	posts = posts.sort(
-		(first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
+	blogs = blogs.sort(
+		(first, second) =>
+			(second.date ? new Date(second.date) : new Date()).getTime() -
+			(first.date ? new Date(first.date) : new Date()).getTime()
 	);
 
-	return posts;
+	return blogs;
 }
 
 export const GET = async ({ params }) => {
 	const { lang } = params;
 
-	const posts = await getPosts(lang);
-	return json(posts);
+	const blogs = await getBlogs(lang);
+	return json(blogs);
 };

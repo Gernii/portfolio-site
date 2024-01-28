@@ -14,7 +14,7 @@
 
 	import { navigate } from '$lib/libs/i18n/routing';
 
-	$: posts = $page.data.posts as Post[];
+	$: blogs = $page.data.blogs as Post[];
 
 	const pageRouting = pageRoutingHandler();
 </script>
@@ -36,8 +36,8 @@
 					{m.blogs_description()}
 				</p>
 			</div>
-			<ul class="space-y-4">
-				{#each posts as post}
+			<ul class="divide-y-2 divide-base-100">
+				{#each blogs as post}
 					<BlogItem {...post} />
 				{/each}
 			</ul>

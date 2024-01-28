@@ -14,22 +14,24 @@
 </script>
 
 {#if slug}
-	<li class="group card card-bordered card-compact bg-base-100 hover:shadow">
-		<div class="card-body">
-			<div>
-				<a
-					class="text-xl font-semibold group-hover:text-primary"
-					href={pageRouting.blogsWithId(slug)}
-				>
-					{title}
-				</a>
-				{#if date}
-					<p>{formatDate(date)}</p>
+	<li class="py-1">
+		<div class="group card card-compact hover:bg-base-100 hover:shadow">
+			<div class="card-body">
+				<div>
+					<a
+						class="text-xl font-semibold group-hover:text-primary"
+						href={pageRouting.blogsWithId(slug)}
+					>
+						{title}
+					</a>
+					{#if date}
+						<p>{formatDate(date)}</p>
+					{/if}
+				</div>
+				{#if description}
+					<p class="line-clamp-2">{description}</p>
 				{/if}
 			</div>
-			{#if description}
-				<p class="line-clamp-2">{description}</p>
-			{/if}
 		</div>
 	</li>
 {/if}
