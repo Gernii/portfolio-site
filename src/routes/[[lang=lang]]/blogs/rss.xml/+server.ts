@@ -2,7 +2,7 @@ import { PUBLIC_HOSTNAME } from '$env/static/public';
 
 import type { Post } from '$lib/utils/types';
 
-import { getLang, route } from '$lib/libs/i18n/routing.js';
+import { getLang, route } from '$lib/libs/i18n/routing';
 
 export const GET = async ({ fetch, params }) => {
 	const lang = getLang(params.lang);

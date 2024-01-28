@@ -5,6 +5,7 @@ import shiki from 'shiki';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';
+import emoji from 'remark-emoji';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
@@ -19,7 +20,7 @@ const mdsvexOptions = {
 	layout: {
 		_: './src/lib/features/markdown/layout.svelte'
 	},
-	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }]],
+	remarkPlugins: [remarkUnwrapImages, [remarkToc, { tight: true }], [emoji, { emoticon: true }]],
 	rehypePlugins: [rehypeSlug]
 };
 

@@ -48,5 +48,9 @@
 	"error404_description": "The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.",
 	"error_image": "Error image",
 	"error500_title": "UH OH! There are something wrong with server",
-	"error500_description": "Current page is down, please try again"
+	"error500_description": "Current page is down, please try again",
+	"publishedAt": "Published at",
+	"categories": "Categories",
+	"blogs": "Blogs",
+	"blogs_description": "This is my personal blog. A place where I share my knowledge and journey"
 }

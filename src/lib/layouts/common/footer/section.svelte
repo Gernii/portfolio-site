@@ -59,10 +59,16 @@
 						>
 							{m.home()}
 						</PageNavItem>
+						<PageNavItem
+							href={pageRouting.blogs}
+							active={$page.url.pathname.includes(pageRouting.blogs)}
+						>
+							{m.blogs()}
+						</PageNavItem>
 
 						<PageNavItem
 							href={pageRouting.about}
-							active={$page.url.pathname.endsWith(pageRouting.about)}
+							active={$page.url.pathname.includes(pageRouting.about)}
 						>
 							{m.about()}
 						</PageNavItem>

@@ -48,5 +48,9 @@
 	"error404_description": "Trang mà bạn đang tìm không tồn tại. Cách bạn đến đây thật là bí ẩn. Nhưng bạn có thể nhấn nút dưới đây để quay về trang chủ.",
 	"error_image": "Hình ảnh minh hoạ lỗi",
 	"error500_title": "UH OH! Hệ thống đang gặp vấn đề",
-	"error500_description": "Trang này hiện đang gặp vấn đề. Vui lòng thử lại sau."
+	"error500_description": "Trang này hiện đang gặp vấn đề. Vui lòng thử lại sau.",
+	"publishedAt": "Đăng ngày",
+	"categories": "Thể loại",
+	"blogs": "Blogs",
+	"blogs_description": "Đây là blog cá nhân của tôi. Nơi tôi chia sẻ những kiến thức và hành trình của bản thân"
 }

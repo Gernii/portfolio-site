@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import { cx } from 'cva';
 
 	import { pageRoutingHandler } from '$lib/utils/page-routing';
@@ -31,8 +33,21 @@
 			'flex-col p-4': sidenav
 		})}
 	>
-		<NavigatorItem href={pageRouting.about} target="_self" aria-label={m.about()}>
+		<NavigatorItem
+			href={pageRouting.about}
+			target="_self"
+			aria-label={m.about()}
+			active={$page.url.pathname.includes(pageRouting.about)}
+		>
 			{m.about()}
+		</NavigatorItem>
+		<NavigatorItem
+			href={pageRouting.blogs}
+			target="_self"
+			aria-label={m.blogs()}
+			active={$page.url.pathname.includes(pageRouting.blogs)}
+		>
+			{m.blogs()}
 		</NavigatorItem>
 		<NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
 			{m.contact()}

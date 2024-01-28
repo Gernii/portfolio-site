@@ -1,8 +1,8 @@
 import { error } from '@sveltejs/kit';
 
-import type { Post } from '$lib/utils/types.js';
+import type { Post } from '$lib/utils/types';
 
-import { getLang } from '$lib/libs/i18n/routing.js';
+import { getLang } from '$lib/libs/i18n/routing';
 
 export const load = async ({ params }) => {
 	const lang = getLang(params.lang);

@@ -16,11 +16,15 @@
 		description?: string;
 		image?: string;
 		JsonLD?: Thing | WithContext<Thing>;
+		type?: 'website' | 'article';
+		removeSiteNameFromTitle?: boolean;
 	}
 
 	export let title: $$Props['title'] = undefined;
 	export let description: NonNullable<$$Props['description']> = m.siteDescription();
 	export let image: NonNullable<$$Props['image']> = `${PUBLIC_HOSTNAME}/personal-image.jpg`;
+	export let type: NonNullable<$$Props['type']> = 'website';
+	export let removeSiteNameFromTitle: NonNullable<$$Props['removeSiteNameFromTitle']> = false;
 	export let JsonLD: NonNullable<$$Props['JsonLD']> = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
@@ -33,7 +37,11 @@
 	};
 	$: currentPage = `${PUBLIC_HOSTNAME}${$page.url.pathname !== '/' ? $page.url.pathname : ''}`;
 
-	$: formattedTitle = title ? m.siteNameWithTitle({ title }) : m.siteName();
+	$: formattedTitle = !removeSiteNameFromTitle
+		? title
+			? m.siteNameWithTitle({ title })
+			: m.siteName()
+		: title;
 </script>
 
 <svelte:head>
@@ -45,11 +53,11 @@
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={image} />
 	<meta name="twitter:image:alt" content={formattedTitle} />
-	<meta property="og:type" content="website" />
+	<meta property="og:type" content={type} />
 	<meta property="og:url" content={currentPage} />
 	<meta property="og:title" content={formattedTitle} />
 	<meta property="og:description" content={description} />
-	<meta property="og:site_name" content={formattedTitle} />
+	<meta property="og:site_name" content={m.siteName()} />
 	<meta property="og:image" content={image} />
 	<meta property="og:locale" content={languageTag()} />
 	<link rel="canonical" href={currentPage} />

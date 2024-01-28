@@ -10,7 +10,7 @@
 	export let href: $$Props['href'];
 
 	$: aClassName = cx('link-hover link', {
-		'font-semibold': active
+		'font-semibold text-primary': active
 	});
 </script>
 
