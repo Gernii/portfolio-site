@@ -60,6 +60,12 @@
 							{m.home()}
 						</PageNavItem>
 						<PageNavItem
+							href={pageRouting.projects}
+							active={$page.url.pathname.includes(pageRouting.projects)}
+						>
+							{m.projects()}
+						</PageNavItem>
+						<PageNavItem
 							href={pageRouting.blogs}
 							active={$page.url.pathname.includes(pageRouting.blogs)}
 						>

@@ -52,5 +52,12 @@
 	"publishedAt": "Published at",
 	"categories": "Categories",
 	"blogs": "Blogs",
-	"blogs_description": "This is my personal blog. A place where I share my knowledge and journey"
+	"blogs_description": "This is my personal blog. A place where I share my knowledge and journey",
+	"projects": "Projects",
+	"projects_description": "This is the projects that I have completed during my work and study",
+	"project_date": "Date",
+	"sourcecode": "Source code",
+	"link": "Link",
+	"website": "Website",
+	"technologyStack": "Tech stack"
 }

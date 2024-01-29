@@ -11,7 +11,6 @@ export const load = async ({ params }) => {
 
 	try {
 		const post = await import(`../../../../blogs/${lang}/${blogName}.md`);
-		console.log(post.default);
 
 		return {
 			content: post.default,

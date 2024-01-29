@@ -1,0 +1,16 @@
+{
+	"title": "The Band",
+	"description": "This is my first website. This site only use HTML and CSS because I haven't learned Javascript yet.",
+	"date": "2021-10-03",
+	"source-code": {
+		"link": "https://github.com/Gernii/theband",
+		"title": "gernii/theband"
+	},
+	"demo": {
+		"link": "https://gernii.github.io/theband",
+		"title": "gernii.github.io/theband"
+	},
+	"published": true,
+	"thumbnail": "/images/projects/theband/thumbnail.webp",
+	"technology-stack": ["html", "css"]
+}

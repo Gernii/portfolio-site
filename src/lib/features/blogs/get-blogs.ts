@@ -1,8 +1,6 @@
-import { json } from '@sveltejs/kit';
-
 import type { Post } from '$lib/utils/types';
 
-async function getBlogs(lang?: string) {
+export const getBlogs = async (lang?: string) => {
 	let blogs: Post[] = [];
 
 	let paths: Record<string, unknown>;
@@ -26,8 +24,8 @@ async function getBlogs(lang?: string) {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
-			const post = { ...metadata, slug } satisfies Post;
-			post.published && blogs.push(post);
+			const blog: Post = { ...metadata, slug };
+			blog.published && blogs.push(blog);
 		}
 	}
 
@@ -38,11 +36,4 @@ async function getBlogs(lang?: string) {
 	);
 
 	return blogs;
-}
-
-export const GET = async ({ params }) => {
-	const { lang } = params;
-
-	const blogs = await getBlogs(lang);
-	return json(blogs);
 };

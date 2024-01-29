@@ -42,6 +42,14 @@
 			{m.about()}
 		</NavigatorItem>
 		<NavigatorItem
+			href={pageRouting.projects}
+			target="_self"
+			aria-label={m.projects()}
+			active={$page.url.pathname.includes(pageRouting.projects)}
+		>
+			{m.projects()}
+		</NavigatorItem>
+		<NavigatorItem
 			href={pageRouting.blogs}
 			target="_self"
 			aria-label={m.blogs()}

@@ -52,5 +52,12 @@
 	"publishedAt": "Đăng ngày",
 	"categories": "Thể loại",
 	"blogs": "Blogs",
-	"blogs_description": "Đây là blog cá nhân của tôi. Nơi tôi chia sẻ những kiến thức và hành trình của bản thân"
+	"blogs_description": "Đây là blog cá nhân của tôi. Nơi tôi chia sẻ những kiến thức và hành trình của bản thân",
+	"projects": "Dự án",
+	"projects_description": "Đây là những dự án mà tôi đã thực hiện trong quá trình làm việc và học tập",
+	"project_date": "Ngày thực hiện",
+	"sourcecode": "Mã nguồn",
+	"link": "Đường dẫn",
+	"website": "Website",
+	"technologyStack": "Công nghệ"
 }

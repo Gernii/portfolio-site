@@ -1,13 +1,12 @@
 import type { Post } from '$lib/utils/types';
 
-import { getLang, route } from '$lib/libs/i18n/routing';
+import { getLang } from '$lib/libs/i18n/routing';
+import { getBlogs } from '$lib/features/blogs/get-blogs';
 
-export const load = async ({ fetch, params }) => {
+export const load = async ({ params }) => {
 	const lang = getLang(params.lang);
 
-	const response = await fetch(route('/api/blogs', lang));
-	const blogs: Post[] = await response.json();
-	console.log(blogs);
+	const blogs: Post[] = await getBlogs(lang);
 
 	return { blogs };
 };
