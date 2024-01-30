@@ -1,20 +1,19 @@
-import type { Project } from '$lib/utils/types';
-
+import { type Project } from '$lib/features/projects';
 import { getLang } from '$lib/libs/i18n/routing';
 
-async function getProjects(lang?: string) {
+const getProjects = async (lang?: string) => {
 	let projects: Project[] = [];
 
 	let paths: Record<string, unknown>;
-
+	// ! import.meta.glob need to hardcode the path to work
 	switch (lang) {
 		case 'en':
-			paths = import.meta.glob(`/src/projects/en/*.json`, {
+			paths = import.meta.glob(`/src/projects/en/*.md`, {
 				eager: true
 			});
 			break;
 		default:
-			paths = import.meta.glob(`/src/projects/vi/**/*.json`, {
+			paths = import.meta.glob(`/src/projects/vi/*.md`, {
 				eager: true
 			});
 			break;
@@ -22,12 +21,12 @@ async function getProjects(lang?: string) {
 
 	for (const path in paths) {
 		const file = paths[path];
+		const slug = path.split('/').at(-1)?.replace('.md', '');
 
-		const slug = path.split('/').at(-2);
+		if (file && typeof file === 'object' && 'metadata' in file && slug) {
+			const metadata = file.metadata as Omit<Project, 'slug'>;
 
-		if (file && typeof file === 'object' && 'default' in file && slug) {
-			const defaultObject = file.default as Omit<Project, 'slug'>;
-			const project: Project = { ...defaultObject, slug };
+			const project: Project = { ...metadata, slug };
 			project.published && projects.push(project);
 		}
 	}
@@ -39,7 +38,7 @@ async function getProjects(lang?: string) {
 	);
 
 	return projects;
-}
+};
 
 export const load = async ({ params }) => {
 	const lang = getLang(params.lang);

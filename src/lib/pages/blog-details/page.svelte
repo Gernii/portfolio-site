@@ -56,7 +56,7 @@
 		},
 		mainEntityOfPage: 'True',
 		keywords: pd.meta.categories
-	} as WithContext<Thing>;
+	} satisfies WithContext<Thing>;
 </script>
 
 <SEO

@@ -1,11 +1,15 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
+	import { PUBLIC_HOSTNAME } from '$env/static/public';
+
+	import type { Thing, WithContext } from 'schema-dts';
+
 	import { Container, ContainerContent } from '$lib/components/ui/container';
 	import { SEO } from '$lib/components/ui/seo';
 
 	import { formatDate } from '$lib/utils/format-date';
-	import type { Project } from '$lib/utils/types';
+	import { pageRoutingHandler } from '$lib/utils/page-routing';
 
 	import * as m from '$i18n/messages';
 
@@ -13,55 +17,37 @@
 	import DetailsItem from './details-item.svelte';
 	import TechnologyStack from './technology-stack.svelte';
 
+	import type { Project } from '$lib/features/projects';
+	import { getLang, route } from '$lib/libs/i18n/routing';
+
 	$: pd = $page.data as { meta: Project; content: any };
 
 	$: meta = pd.meta;
 
-	// TODO: Add JsonLD
-	// $: JsonLDData = {
-	// 	'@context': 'https://schema.org',
-	// 	'@type': 'BlogPosting',
-	// 	image: meta.thumbnail,
-	// 	url: $page.url.href,
-	// 	headline: meta.title,
-	// 	dateCreated: meta.date,
-	// 	datePublished: meta.date,
-	// 	// dateModified: '2019-02-11T11:11:11',
-	// 	inLanguage: $currentLang,
-	// 	isFamilyFriendly: true,
-	// 	contentLocation: {
-	// 		'@type': 'Place',
-	// 		name: 'Ho Chi Minh City, Vietnam'
-	// 	},
-	// 	accountablePerson: {
-	// 		'@type': 'Person',
-	// 		name: m.myFullName(),
-	// 		url: $page.url.origin
-	// 	},
-	// 	author: {
-	// 		'@type': 'Person',
-	// 		name: m.myFullName(),
-	// 		url: $page.url.origin
-	// 	},
-	// 	creator: {
-	// 		'@type': 'Person',
-	// 		name: m.myFullName(),
-	// 		url: $page.url.origin
-	// 	},
-	// 	publisher: {
-	// 		'@type': 'Organization',
-	// 		name: m.myFullName(),
-	// 		url: $page.url.origin,
-	// 		logo: {
-	// 			'@type': 'ImageObject',
-	// 			url: $page.url.origin + '/personal-image.jpg'
-	// 		}
-	// 	},
-	// 	mainEntityOfPage: 'True'
-	// } as WithContext<Thing>;
+	const pageRouting = pageRoutingHandler();
+
+	$: JsonLDData = {
+		'@context': 'https://schema.org',
+		'@type': 'SoftwareSourceCode',
+		name: meta.title,
+		keywords: 'website,projects',
+		url: $page.url.href,
+		datePublished: meta.date,
+		dateCreated: meta.date,
+		creator: {
+			'@type': 'Person',
+			name: m.myFullName(),
+			url: route(pageRouting.home, getLang(), true)
+		},
+		image: {
+			'@type': 'ImageObject',
+			url: `${PUBLIC_HOSTNAME}${meta.thumbnail}`
+		},
+		description: meta.description
+	} satisfies WithContext<Thing>;
 </script>
 
-<SEO type="article" title={`${meta.title}`} description={meta.description} />
+<SEO type="article" title={`${meta.title}`} JsonLD={JsonLDData} description={meta.description} />
 
 <div class="mt-header-space">
 	<Container root="section">
@@ -79,7 +65,7 @@
 					<Details>
 						{#if meta.date}
 							<DetailsItem title={m.project_date()}>
-								{formatDate(meta.date, 'short')}
+								{formatDate(meta.date, 'medium')}
 							</DetailsItem>
 						{/if}
 						{#if meta.sourceCode?.link}
@@ -92,7 +78,7 @@
 						{#if meta.demo?.link}
 							<DetailsItem title={m.website()}>
 								<a class="link" href={meta.demo.link}>
-									{meta.demo?.title ?? m.link()}
+									{meta.demo?.title ?? m.demo()}
 								</a>
 							</DetailsItem>
 						{/if}

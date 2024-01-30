@@ -1,5 +1,7 @@
 import { page } from '$app/stores';
 
+import { PUBLIC_HOSTNAME } from '$env/static/public';
+
 import { derived, get } from 'svelte/store';
 
 import { type AvailableLanguageTag, availableLanguageTags, sourceLanguageTag } from '$i18n/runtime';
@@ -7,7 +9,7 @@ import { type AvailableLanguageTag, availableLanguageTags, sourceLanguageTag } f
 /**
  * Returns the path in the given language, regardless of which language the path is in.
  */
-export const route = (path: string, lang?: AvailableLanguageTag) => {
+export const route = (path: string, lang?: AvailableLanguageTag, host?: boolean) => {
 	path = withoutLanguageTag(path);
 	const isStartWithSlash = path.startsWith('/');
 
@@ -15,16 +17,37 @@ export const route = (path: string, lang?: AvailableLanguageTag) => {
 
 	// Don't prefix the default language
 	if (lang === sourceLanguageTag || lang === undefined) {
-		if (isStartWithSlash || isHomePage) return `${path}`;
-		return `/${path}`;
+		if (isStartWithSlash) {
+			if (isHomePage) {
+				if (!host) {
+					return '';
+				}
+				return `${PUBLIC_HOSTNAME}`;
+			}
+			if (!host) {
+				return `${path}`;
+			}
+			return `${PUBLIC_HOSTNAME}${path}`;
+		}
+		if (!host) {
+			return `/${path}`;
+		}
+		return `${PUBLIC_HOSTNAME}/${path}`;
 	}
 
 	if (isHomePage) {
-		return `/${lang}`;
+		if (!host) {
+			return `/${lang}`;
+		}
+		return `${PUBLIC_HOSTNAME}/${lang}`;
+	}
+
+	if (!host) {
+		return `/${lang}${isStartWithSlash ? '' : '/'}${path}`;
 	}
 
 	// Prefix all other languages
-	return `/${lang}${isStartWithSlash ? '' : '/'}${path}`;
+	return `${PUBLIC_HOSTNAME}/${lang}${isStartWithSlash ? '' : '/'}${path}`;
 };
 
 export const navigate = (path: string) => {

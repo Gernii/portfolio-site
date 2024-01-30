@@ -5,11 +5,11 @@
 	import { Container, ContainerContent } from '$lib/components/ui/container';
 	import SectionTitle from '$lib/components/ui/section-title/section-title.svelte';
 
-	import type { Project } from '$lib/utils/types';
-
 	import * as m from '$i18n/messages';
 
 	import ProjectItem from './project-item.svelte';
+
+	import type { Project } from '$lib/features/projects';
 
 	$: projects = $page.data.projects as Project[];
 </script>

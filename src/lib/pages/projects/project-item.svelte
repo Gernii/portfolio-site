@@ -2,7 +2,8 @@
 	import { DEFAULT_THUMBNAIL } from '$lib/utils/constants';
 	import { formatDate } from '$lib/utils/format-date';
 	import { pageRoutingHandler } from '$lib/utils/page-routing';
-	import type { Project } from '$lib/utils/types';
+
+	import type { Project } from '$lib/features/projects';
 
 	type $$Props = Project;
 
