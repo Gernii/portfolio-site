@@ -1,6 +1,6 @@
 import type { VariantProps } from 'cva';
 
-import type { Boolean } from '$lib/utils/types/common';
+import type { Boolean } from '$lib/utils/types';
 
 import type { containerClassNameHandler, containerContentClassNameHandler } from './styles';
 

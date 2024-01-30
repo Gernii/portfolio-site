@@ -9,3 +9,5 @@ export type Post = {
 	published?: boolean;
 	thumbnail?: string;
 };
+
+export type Boolean = 'true' | 'false';

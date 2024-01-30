@@ -17,6 +17,8 @@
 		"test:unit": "vitest run",
 		"prepare": "husky install",
 		"validate": "run-s \"validate.*\"",
+		"validate.test": "run-s test:unit",
+		"validate.check": "run-s check",
 		"validate.fmt": "run-s \"fmt.*\"",
 		"validate.lint": "run-s \"lint.*\"",
 		"validate.build": "run-s build",
