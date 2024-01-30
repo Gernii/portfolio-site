@@ -53,27 +53,27 @@
 
 					<PageNav root="ul" title={m.pages()}>
 						<PageNavItem
-							href={pageRouting.home}
+							href={navigate(pageRouting.home)}
 							active={availableLanguageTags.some((lang) => $page.url.pathname.endsWith(lang)) ||
 								$page.url.pathname.endsWith(pageRouting.home)}
 						>
 							{m.home()}
 						</PageNavItem>
 						<PageNavItem
-							href={pageRouting.projects}
+							href={navigate(pageRouting.projects)}
 							active={$page.url.pathname.includes(pageRouting.projects)}
 						>
 							{m.projects()}
 						</PageNavItem>
 						<PageNavItem
-							href={pageRouting.blogs}
+							href={navigate(pageRouting.blogs)}
 							active={$page.url.pathname.includes(pageRouting.blogs)}
 						>
 							{m.blogs()}
 						</PageNavItem>
 
 						<PageNavItem
-							href={pageRouting.about}
+							href={navigate(pageRouting.about)}
 							active={$page.url.pathname.includes(pageRouting.about)}
 						>
 							{m.about()}

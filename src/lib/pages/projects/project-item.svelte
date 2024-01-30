@@ -4,6 +4,7 @@
 	import { pageRoutingHandler } from '$lib/utils/page-routing';
 
 	import type { Project } from '$lib/features/projects';
+	import { navigate } from '$lib/libs/i18n/routing';
 
 	type $$Props = Project;
 
@@ -17,10 +18,12 @@
 </script>
 
 {#if slug}
-	<li class="py-1">
-		<div class="group card card-bordered card-compact bg-base-100 hover:bg-base-200 hover:shadow">
+	<li>
+		<div
+			class="group card card-bordered card-compact h-full bg-base-100 hover:bg-base-200 hover:shadow"
+		>
 			<div class="relative aspect-thumbnail169 overflow-hidden rounded-t-box">
-				<a href={pageRouting.projectsWithId(slug)}>
+				<a href={navigate(pageRouting.projectsWithId(slug))}>
 					<img
 						src={thumbnail ?? DEFAULT_THUMBNAIL}
 						alt={title}
@@ -32,7 +35,7 @@
 				<div>
 					<a
 						class="text-xl font-semibold group-hover:text-primary"
-						href={pageRouting.projectsWithId(slug)}
+						href={navigate(pageRouting.projectsWithId(slug))}
 					>
 						{title}
 					</a>

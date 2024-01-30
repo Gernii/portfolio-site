@@ -12,6 +12,8 @@
 
 	import NavigatorItem from './navigator-item.svelte';
 
+	import { navigate } from '$lib/libs/i18n/routing';
+
 	interface $$Props {
 		sidenav?: boolean;
 	}
@@ -34,7 +36,7 @@
 		})}
 	>
 		<NavigatorItem
-			href={pageRouting.about}
+			href={navigate(pageRouting.about)}
 			target="_self"
 			aria-label={m.about()}
 			active={$page.url.pathname.includes(pageRouting.about)}
@@ -42,7 +44,7 @@
 			{m.about()}
 		</NavigatorItem>
 		<NavigatorItem
-			href={pageRouting.projects}
+			href={navigate(pageRouting.projects)}
 			target="_self"
 			aria-label={m.projects()}
 			active={$page.url.pathname.includes(pageRouting.projects)}
@@ -50,7 +52,7 @@
 			{m.projects()}
 		</NavigatorItem>
 		<NavigatorItem
-			href={pageRouting.blogs}
+			href={navigate(pageRouting.blogs)}
 			target="_self"
 			aria-label={m.blogs()}
 			active={$page.url.pathname.includes(pageRouting.blogs)}

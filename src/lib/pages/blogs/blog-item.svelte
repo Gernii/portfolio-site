@@ -3,6 +3,8 @@
 	import { pageRoutingHandler } from '$lib/utils/page-routing';
 	import type { Post } from '$lib/utils/types';
 
+	import { navigate } from '$lib/libs/i18n/routing';
+
 	type $$Props = Post;
 
 	export let slug: $$Props['slug'] = undefined;
@@ -20,7 +22,7 @@
 				<div>
 					<a
 						class="text-xl font-semibold group-hover:text-primary"
-						href={pageRouting.blogsWithId(slug)}
+						href={navigate(pageRouting.blogsWithId(slug))}
 					>
 						{title}
 					</a>

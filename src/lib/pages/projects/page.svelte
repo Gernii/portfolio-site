@@ -25,7 +25,7 @@
 					{m.projects_description()}.
 				</p>
 			</div>
-			<ul class="grid grid-cols-3 divide-y-2 divide-base-100">
+			<ul class="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
 				{#each projects as project}
 					<ProjectItem {...project} />
 				{/each}
