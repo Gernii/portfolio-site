@@ -19,5 +19,11 @@ export const getSkillName = (skill: SkillTypes) => {
 			return 'Svelte';
 		case 'sveltekit':
 			return 'SvelteKit';
+		case 'tailwindcss':
+			return 'TailwindCSS';
+		case 'vite':
+			return 'Vite';
+		case 'partytown':
+			return 'Partytown';
 	}
 };

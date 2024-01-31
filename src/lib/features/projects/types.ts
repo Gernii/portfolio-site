@@ -1,19 +1,18 @@
 import type { SkillTypes } from '../skill-icons';
 
-export interface Project_Collaborator {
+export interface Project_TeamMember {
 	name?: string;
 	ref?: string;
 }
 
-export interface Project_SourceCode {
+interface Project_External {
 	link?: string;
 	title?: string;
 }
 
-export interface Project_Demo {
-	link?: string;
-	title?: string;
-}
+export type Project_Prototype = Project_External;
+export type Project_SourceCode = Project_External;
+export type Project_Demo = Project_External;
 
 export interface Project {
 	title?: string;
@@ -24,6 +23,7 @@ export interface Project {
 	demo?: Project_Demo;
 	published?: boolean;
 	thumbnail?: string;
-	collaborator?: Project_Collaborator[];
+	teamMember?: Project_TeamMember[];
 	technologyStack?: SkillTypes[];
+	prototype?: Project_Prototype;
 }

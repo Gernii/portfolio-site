@@ -71,14 +71,33 @@
 						{#if meta.sourceCode?.link}
 							<DetailsItem title={m.sourcecode()}>
 								<a class="link" href={meta.sourceCode.link}>
-									{meta.sourceCode?.title ?? m.link()}
+									{meta.sourceCode.title ?? m.link()}
 								</a>
 							</DetailsItem>
 						{/if}
+						{#if meta.teamMember && meta.teamMember.length > 0}
+							<DetailsItem title={m.teamMember()}>
+								{#each meta.teamMember as member}
+									{#if member.name}
+										<a class="link" href={member.ref} target="_blank" rel="noopener noreferrer">
+											{member.name}
+										</a>
+									{/if}
+								{/each}
+							</DetailsItem>
+						{/if}
+						{#if meta.prototype?.link}
+							<DetailsItem title={m.prototype()}>
+								<a class="link" href={meta.prototype.link}>
+									{meta.prototype.title ?? m.link()}
+								</a>
+							</DetailsItem>
+						{/if}
+
 						{#if meta.demo?.link}
 							<DetailsItem title={m.website()}>
 								<a class="link" href={meta.demo.link}>
-									{meta.demo?.title ?? m.demo()}
+									{meta.demo.title ?? m.demo()}
 								</a>
 							</DetailsItem>
 						{/if}

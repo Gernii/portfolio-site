@@ -60,5 +60,7 @@
 	"link": "Link",
 	"website": "Website",
 	"technologyStack": "Tech stack",
-	"demo": "Demo"
+	"demo": "Demo",
+	"prototype": "Prototype",
+	"teamMember": "Team member"
 }

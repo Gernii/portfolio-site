@@ -9,6 +9,9 @@
 	import LogosQwikIcon from '~icons/logos/qwik-icon';
 	import LogosReact from '~icons/logos/react';
 	import LogosSvelteIcon from '~icons/logos/svelte-icon';
+	import LogosPartytownIcon from '~icons/logos/partytown-icon';
+	import LogosTailwindcssIcon from '~icons/logos/tailwindcss-icon';
+	import LogosVitejs from '~icons/logos/vitejs';
 
 	interface $$Props {
 		skill: SkillTypes;
@@ -36,4 +39,10 @@
 	<LogosSvelteIcon class={className} />
 {:else if skill === 'typescript'}
 	<LogosTypescriptIcon class={className} />
+{:else if skill === 'vite'}
+	<LogosVitejs class={className} />
+{:else if skill === 'partytown'}
+	<LogosPartytownIcon class={className} />
+{:else if skill === 'tailwindcss'}
+	<LogosTailwindcssIcon class={className} />
 {/if}

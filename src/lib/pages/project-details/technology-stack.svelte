@@ -14,7 +14,7 @@
 	<div class="font-semibold">{m.technologyStack()}:</div>
 	{#each techs as tech}
 		<div
-			class="tooltip rounded-full border-4 border-base-200 bg-base-100 p-1 transition-colors hover:border-primary"
+			class="tooltip rounded-full border-4 border-base-200 bg-base-100 p-1.5 transition-colors hover:border-primary"
 			data-tip={getSkillName(tech)}
 		>
 			<Skills skill={tech} class="size-8" />

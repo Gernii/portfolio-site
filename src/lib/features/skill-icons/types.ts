@@ -7,4 +7,7 @@ export type SkillTypes =
 	| 'qwik'
 	| 'svelte'
 	| 'sveltekit'
-	| 'aws';
+	| 'aws'
+	| 'tailwindcss'
+	| 'vite'
+	| 'partytown';
