@@ -13,11 +13,11 @@ runs:
   steps:
     - name: Lint
       shell: bash
-      run: npm run lint
+      run: npm run lint.check
 
     - name: Fmt
       shell: bash
-      run: npm run fmt
+      run: npm run fmt.check
 
     - name: Test
       shell: bash
