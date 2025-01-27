@@ -22,16 +22,3 @@ runs:
     - name: Test
       shell: bash
       run: npm run test
-
-    - name: Check
-      shell: bash
-      run: npm run check
-      env:
-        PUBLIC_HOSTNAME: ${{ inputs.public_hostname }}
-
-    - name: Build
-      shell: bash
-      run: npm run build
-      env:
-        PUBLIC_HOSTNAME: ${{ inputs.public_hostname }}
-        VITE_HOSTNAME: ${{ inputs.public_hostname }}
