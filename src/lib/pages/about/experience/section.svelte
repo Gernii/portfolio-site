@@ -14,12 +14,13 @@
 			<Item
 				companyName="CoTAI"
 				companyLongName={m.CoTAIFullText()}
-				monthStart={1}
-				role="Full-stack Developer"
-				yearStart={2022}
+				role="Software Engineer"
+				monthStart={9}
+				monthEnd={9}
+				yearStart={2019}
+				yearEnd={2024}
 				companyUrl="https://cot.ai"
 				description={m.CoTAIDescription()}
-				isWorking
 			/>
 		</div>
 	</ContainerContent>

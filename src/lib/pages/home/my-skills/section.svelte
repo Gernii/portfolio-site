@@ -13,6 +13,7 @@
 	import LogosTypescriptIcon from '~icons/logos/typescript-icon';
 	import LogosSvelteIcon from '~icons/logos/svelte-icon';
 	import LogosReact from '~icons/logos/react';
+	import LogosVue from '~icons/logos/vue';
 	import LogosQwikIcon from '~icons/logos/qwik-icon';
 	import LogosTailwindcssIcon from '~icons/logos/tailwindcss-icon';
 	import LogosServerless from '~icons/logos/serverless';
@@ -54,6 +55,9 @@
 				</SkillCard>
 				<SkillCard tooltip="React Native" title="React N">
 					<LogosReact class={iconClassName} />
+				</SkillCard>
+				<SkillCard tooltip="Vue 3" title="Vue 3">
+					<LogosVue class={iconClassName} />
 				</SkillCard>
 				<SkillCard tooltip="Svelte">
 					<LogosSvelteIcon class={iconClassName} />

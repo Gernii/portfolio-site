@@ -18,7 +18,7 @@
 					texts={[
 						`${m.homepage_hero_subtitle()} Front-end developer`,
 						`${m.homepage_hero_subtitle()} Back-end developer`,
-						`${m.homepage_hero_subtitle_studying()} Cloud developer (AWS)`
+						`${m.homepage_hero_subtitle_studying()} Cloud (AWS)`
 					]}
 				/>
 			</p>
