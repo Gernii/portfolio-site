@@ -47,7 +47,7 @@
 					<a href="https://vhu.edu.vn" rel="noopener noreferrer" target="_blank"
 						>{m.Van_Hien_University()}</a
 					>
-					{m.about_person_line_5_3()} <b>Full-stack Developer</b>
+					{m.about_person_line_5_3()} <b>Software Engineer</b>
 					{m.at()}
 					<a
 						href="https://cot.ai"
